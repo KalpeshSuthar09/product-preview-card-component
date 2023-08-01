@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+  flex-direction: column;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 650px;
+  background-color: var(--White);
+}
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 50%;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+}
+
+.right-side {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-side .title{
+    font-size: 14px;
+    font-family: "Fraunces", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.right-side h2{
+    font-size: 34px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.right-side p{
+    font-size: 14px;
+    font-family: "Fraunces", sans-serif;
+    letter-spacing: 2px;
+}
+
+.right-side .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right-side .price .p1{
+    font-size: 35px;
+    font-family: "Fraunces", sans-serif;
+    color: var(--Dark-cyan);
+    font-weight: 900;
+    text-align: center;
+}
+.right-side .price .p2{
+    font-size: 14px;
+    font-family: "Fraunces", sans-serif;
+    text-decoration-line: line-through;
+}
+
+.btn{
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--Dark-cyan);
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+}
+
+@media screen and (max-width: 650px) {
+    body {
+      align-items: center;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;
+        height: 50%;
+    }
+    .card-content {
+      flex-direction: column;
+      height: 100%;
+    }
+    .left-side {
+      border-radius: 0 0 1rem 1rem;
+      width: 100%;
+      height: 300px;
+    }
+    .result img {
+      width: 250px;
+      height: 50%;
+    }
+    .right-side {
+      width: 100%;
+      height: 40%;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .right-side{
+        gap: 2rem;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
